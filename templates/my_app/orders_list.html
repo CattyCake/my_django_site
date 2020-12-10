@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+<div><h1><a href="/">Домашняя страница</a></h1></div>
+<div><h2>Здравствуй, Пользователь!</h2></div>
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for order in orders %}
+                <div class="order">
+                    <div class="date">
+                        <p>Номер заказа: {{ order.order_number }}</p>
+                    </div>
+                    <h2> Ваш курьер <a href=""> {{ order.courier }}</a></h2>
+                    <h3> Адресс доставки: {{ order.order_name }}</h3>
+                    <Img src="https://clck.ru/SPN9W" Width="300" Height="200">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

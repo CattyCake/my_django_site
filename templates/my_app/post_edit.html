@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cоздание новой заявки</title>
+</head>
+<body>
+<h1>Новая заявка на доставку</h1>
+<form method="POST" class="post-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Доставить</button>
+</form>
+<Img src="https://clck.ru/SPPMT" Width="300" Height="200">
+</body>
+</html>
